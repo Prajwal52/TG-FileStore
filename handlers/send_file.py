@@ -9,7 +9,8 @@ from handlers.helpers import str_to_b64
 async def reply_forward(message: Message, file_id: int):
     try:
         await message.reply_text(
-            f"**Files will be Deleted After 10 min ⏰**\n",
+            f"**
+            ⏰ File(s) will auto delete in 30 Mins/n/n↗️ Forward anywhere or save privately before downloading**\n",
             disable_web_page_preview=True, quote=True)
     except FloodWait as e:
         await asyncio.sleep(e.value)
