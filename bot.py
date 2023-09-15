@@ -471,9 +471,6 @@ async def button(bot: Client, cmd: CallbackQuery):
     except QueryIdInvalid: pass
         
         #web-response
-        app = web.AppRunner(await web_server())
-        await app.setup()
-        bind_address = "0.0.0.0"
-        await web.TCPSite(app, bind_address, PORT).start()
+       
 
 Bot.run()
