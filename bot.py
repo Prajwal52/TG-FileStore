@@ -1,8 +1,5 @@
 # (c) @TeleRoidGroup || @PredatorHackerzZ
 
-from aiohttp import web
-from handlers import web_server
-
 import os
 import asyncio
 import traceback
