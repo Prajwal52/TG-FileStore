@@ -1,4 +1,6 @@
 # (c) @TeleRoidGroup || @PredatorHackerzZ
+from aiohttp import web
+from plugins import web_server
 
 import os
 import asyncio
@@ -457,5 +459,10 @@ async def button(bot: Client, cmd: CallbackQuery):
         await cmd.answer()
     except QueryIdInvalid: pass
 
+        #web-response
+        app = web.AppRunner(await web_server())
+        await app.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(app, bind_address, PORT).start()
 
 Bot.run()
