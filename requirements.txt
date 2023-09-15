@@ -1,9 +1,11 @@
 Pyrogram
 TgCrypto
 motor
-aiohttp
 aiofiles
 dnspython
 psutil
 render
 requests
+flask
+gunicorn
+aiohttp
