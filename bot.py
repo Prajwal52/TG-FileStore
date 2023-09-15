@@ -1,7 +1,7 @@
 # (c) @TeleRoidGroup || @PredatorHackerzZ
 
 from aiohttp import web
-from plugins import web_server
+from handlers import web_server
 
 import os
 import asyncio
